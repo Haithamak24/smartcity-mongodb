@@ -21,7 +21,7 @@ MongoDB was chosen as the **primary database** for this platform because:
 **Purpose:** Stores all registered citizen profiles. Each document is self-contained — no JOINs needed to load a full profile.
 
 ```json
-{
+{ 
   "_id": ObjectId("64a1f2b3c4d5e6f7a8b9c0d1"),
   "userId": "USR-2026-00001",
   "nameAr": "أحمد المصري",
