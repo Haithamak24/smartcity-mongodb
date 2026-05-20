@@ -1,0 +1,21 @@
+{
+  "name": "smartcity-mongodb",
+  "version": "1.0.0",
+  "description": "Smart City Services Platform — MongoDB + Elasticsearch layer",
+  "scripts": {
+    "seed": "node seed-data/seed.js",
+    "indexes": "node indexes/indexes.js",
+    "queries": "node queries/queries.js",
+    "aggregations": "node aggregations/aggregations.js",
+    "es:setup": "node elasticsearch/es-mapping.js",
+    "es:sync": "node elasticsearch/es-sync.js --mode=both",
+    "es:sync:initial": "node elasticsearch/es-sync.js --mode=initial",
+    "es:sync:live": "node elasticsearch/es-sync.js --mode=live",
+    "es:queries": "node elasticsearch/es-queries.js",
+    "setup:all": "npm run seed && npm run indexes && npm run es:setup && npm run es:sync:initial"
+  },
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.12.0",
+    "mongodb": "^7.2.0"
+  }
+}
